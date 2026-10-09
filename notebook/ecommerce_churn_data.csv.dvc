@@ -1,0 +1,5 @@
+outs:
+- md5: c908f7642b8a79d2b665edf771aa2520
+  size: 566084
+  hash: md5
+  path: ecommerce_churn_data.csv
