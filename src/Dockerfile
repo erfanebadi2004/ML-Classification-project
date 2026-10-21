@@ -1,8 +1,10 @@
-FROM python:3.9-slim
+ARG PY_VERSION=3.9-slim
+
+FROM python:${PY_VERSION}
 
 WORKDIR /app
 
-COPY . /app
+COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
