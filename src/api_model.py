@@ -15,7 +15,7 @@ logger = logging.getLogger("Lgbm Mode Api")
 
 # تعیین مسیر فایل های مدل و داده های مرجع و نام ستون ها
 BASE_DIR = Path(__file__).resolve().parent.parent
-FEATURE_PATH = BASE_DIR / "src" / "features_name.pkl"
+FEATURE_PATH = BASE_DIR / "src" / "./Files" / "features_name.pkl"
 REFERENCE_PATH = BASE_DIR / "src" / "./Files" / "reference.csv"
 MODEL_PATH = BASE_DIR / "src" / "./LgbmClassification_folder"
 

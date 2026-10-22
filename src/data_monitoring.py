@@ -18,7 +18,7 @@ def check_data_drift(reference=None ,current=None):
     # تصمیم گیری بر اساس آستانه threshold , 50 درصدی
     if result_drift["metrics"][0]["value"]["share"] > 0.5:
         # اگر بیش از 50 درصد ویژگی ها تغییر کرده باشند هشدار بحرانی صادر خواهد شد
-        print(f"⚠️ DATA DRIFT DETECTED! Score: {result_drift["metrics"][0]["value"]["share"]}")
+        print(f"⚠️ DATA DRIFT DETECTED! Score: {result_drift['metrics'][0]['value']['share']}")
     else:
         # در غیر این صورت اطلاع رسانی میکند که تغییری در داده ها وجود ندارد
-        print(f"No change was found in the distribution of inputs, score : {result_drift["metrics"][0]["value"]["share"]}")
+        print(f"No change was found in the distribution of inputs, score : {result_drift['metrics'][0]['value']['share']}")
