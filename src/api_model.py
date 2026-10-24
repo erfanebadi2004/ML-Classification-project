@@ -1,3 +1,4 @@
+import skops.io as sio
 import logging
 import joblib
 import pandas as pd
@@ -7,17 +8,21 @@ from validation import BatchPredictionRequest
 from pathlib import Path
 from data_monitoring import check_data_drift
 
+# تعیین مسیر فایل های مدل و داده های مرجع و نام ستون ها
+BASE_DIR = Path(__file__).resolve().parent
+FEATURE_PATH = BASE_DIR / "Files" / "features_name.pkl"
+REFERENCE_PATH = BASE_DIR / "Files" / "reference.csv"
+LOG_FILE_PATH = BASE_DIR / "Files" / "app_errors.log"
+MODEL_PATH = BASE_DIR / "LgbmClassification_folder" / "model.skops"
+
 # تنظیم سیستم logging برای ذخیره و نمایش گزارش ها در زمان اجرا برنامه در محیط سرور
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-                    handlers=[logging.FileHandler("Files/app_errors.log"), logging.StreamHandler()])
+                    handlers=[logging.FileHandler(LOG_FILE_PATH), logging.StreamHandler()])
 
 logger = logging.getLogger("Lgbm Mode Api")
 
-# تعیین مسیر فایل های مدل و داده های مرجع و نام ستون ها
-BASE_DIR = Path(__file__).resolve().parent.parent
-FEATURE_PATH = BASE_DIR / "src" / "./Files" / "features_name.pkl"
-REFERENCE_PATH = BASE_DIR / "src" / "./Files" / "reference.csv"
-MODEL_PATH = BASE_DIR / "src" / "./LgbmClassification_folder"
+df_reference = None
+lgbm_model = None
 
 # بارگزاری داده های مرجع reference و نام ستون ها قبل از شروع کار API برای جلوگیری از خواندن مجدد فایل ها در محیط سرور
 try:
@@ -30,9 +35,10 @@ try:
 except Exception as e:
         logger.error(f"Critical error: Reference data failed to load. {REFERENCE_PATH}: {str(e)}")
 
-# بارگزاری مدل light gbm از MLFlow
+# بارگزاری مدل lightgbm با استفاده از skops برای جلوگیری از نفود فایل های مخرب به سیستم
 try:
-    lgbm_model = mlflow.pyfunc.load_model(MODEL_PATH)
+    model_uri = str(MODEL_PATH)
+    lgbm_model = sio.load(MODEL_PATH, trusted=['collections.OrderedDict', 'imblearn.over_sampling._smote.base.SMOTE', 'imblearn.pipeline.Pipeline', 'lightgbm.basic.Booster', 'lightgbm.sklearn.LGBMClassifier', 'numpy.dtype', 'sklearn.metrics._dist_metrics.EuclideanDistance64', 'sklearn.neighbors._kd_tree.KDTree'])
     logger.info(f"Model loaded successfully: {MODEL_PATH}")
 
 except Exception as error:
@@ -44,6 +50,8 @@ app = FastAPI(title="LGBMClassificationModel_API")
 # تعریف مسیر endpoint برای دریافت درخواست های پیش بینی
 @app.post("/predict")
 def predict_lgbm_classification(request: BatchPredictionRequest, background_tasks: BackgroundTasks):
+    global df_reference
+    global lgbm_model
 
     # بررسی مدل بارگزاری شده برای زمانی که مدل به درستی بارگزاری نشده خطا 500 برمیگرداند
     if lgbm_model is None:
@@ -64,7 +72,7 @@ def predict_lgbm_classification(request: BatchPredictionRequest, background_task
         min_sample = 50
 
         if len(df) > min_sample:
-            # ثبت وظایف در پس زمینه برای بررسی انحراف داده drift
+            # ثبت وظایف در پس زمینه برای بررسی انحراف و تغییر داده drift
             background_tasks.add_task(check_data_drift, df_reference, df)
         else:
             logger.info("The number of samples is lower than the threshold expected for data monitoring .")
