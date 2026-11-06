@@ -2,7 +2,6 @@ import skops.io as sio
 import logging
 import joblib
 import pandas as pd
-import mlflow.pyfunc
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from validation import BatchPredictionRequest
 from pathlib import Path
@@ -23,6 +22,7 @@ logger = logging.getLogger("Lgbm Mode Api")
 
 df_reference = None
 lgbm_model = None
+model_is_loaded = None
 
 # بارگزاری داده های مرجع reference و نام ستون ها قبل از شروع کار API برای جلوگیری از خواندن مجدد فایل ها در محیط سرور
 try:
@@ -37,7 +37,6 @@ except Exception as e:
 
 # بارگزاری مدل lightgbm با استفاده از skops برای جلوگیری از نفود فایل های مخرب به سیستم
 try:
-    model_uri = str(MODEL_PATH)
     lgbm_model = sio.load(MODEL_PATH, trusted=['collections.OrderedDict', 'imblearn.over_sampling._smote.base.SMOTE', 'imblearn.pipeline.Pipeline', 'lightgbm.basic.Booster', 'lightgbm.sklearn.LGBMClassifier', 'numpy.dtype', 'sklearn.metrics._dist_metrics.EuclideanDistance64', 'sklearn.neighbors._kd_tree.KDTree'])
     logger.info(f"Model loaded successfully: {MODEL_PATH}")
 
@@ -46,6 +45,28 @@ except Exception as error:
 
 # راه اندازی اپلیکیشن FastAPI
 app = FastAPI(title="LGBMClassificationModel_API")
+
+@app.get("/health")
+def health_check():
+    global model_is_loaded
+
+    if lgbm_model is None:
+        model_is_loaded = False
+
+        return {
+            "status_code": 500,
+            "status": "UnHealthy",
+            "model_loaded": model_is_loaded,
+            "message": "The model failed to load!"}
+
+    else:
+        model_is_loaded = True
+
+        return {
+            "status_code": 200,
+            "status": "Healthy",
+            "model_loaded": model_is_loaded,
+            "message": "API is up and running smoothly"}
 
 # تعریف مسیر endpoint برای دریافت درخواست های پیش بینی
 @app.post("/predict")

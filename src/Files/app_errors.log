@@ -1,0 +1,377 @@
+2026-10-23 00:11:03,694 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 00:11:13,852 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder
+2026-10-23 00:11:25,414 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 00:11:34,111 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder
+2026-10-23 00:11:35,891 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:11:36,550 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:11:37,395 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:11:50,601 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:11:51,552 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:12:05,663 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:12:06,588 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:12:20,661 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:12:21,673 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:12:35,723 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:12:36,782 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:12:50,756 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:12:51,747 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:13:05,792 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:13:06,649 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:13:20,818 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:13:21,875 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:13:25,763 - Lgbm Mode Api - INFO - The number of samples is lower than the threshold expected for data monitoring .
+2026-10-23 00:13:35,323 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:13:36,207 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:13:55,397 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:13:56,172 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:14:00,219 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:14:00,684 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:14:26,043 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:14:27,004 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:14:40,772 - watchfiles.main - INFO - 1 change detected
+2026-10-23 00:14:41,897 - watchfiles.main - INFO - 1 change detected
+2026-10-23 15:33:53,216 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 15:34:12,708 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder
+2026-10-23 15:34:35,659 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 15:34:55,073 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder
+2026-10-23 15:35:56,775 - Lgbm Mode Api - INFO - The number of samples is lower than the threshold expected for data monitoring .
+2026-10-23 16:14:10,684 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 16:14:15,209 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder
+2026-10-23 16:14:20,948 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 16:31:35,545 - Lgbm Mode Api - ERROR - Critical error: Reference data failed to load. C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\Files\reference.csv: [Errno 2] No such file or directory: 'C:\\Users\\ASUS\\PythonProject4\\Jupyter_Notebook\\e-commerce_customer_churn\\Files\\reference.csv'
+2026-10-23 16:31:36,752 - Lgbm Mode Api - ERROR - Model loading failed'WindowsPath' object has no attribute 'decode'
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 38, in <module>
+    lgbm_model = mlflow.pyfunc.load_model(MODEL_PATH)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracing\provider.py", line 891, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\pyfunc\__init__.py", line 1131, in load_model
+    local_path = _download_artifact_from_uri(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracking\artifact_utils.py", line 116, in _download_artifact_from_uri
+    root_uri, artifact_path = _get_root_uri_and_artifact_path(artifact_uri)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracking\artifact_utils.py", line 91, in _get_root_uri_and_artifact_path
+    if ModelsArtifactRepository.is_models_uri(artifact_uri):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\models_artifact_repo.py", line 92, in is_models_uri
+    return urllib.parse.urlparse(uri).scheme == "models"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\urllib\parse.py", line 394, in urlparse
+    url, scheme, _coerce_result = _coerce_args(url, scheme)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\urllib\parse.py", line 133, in _coerce_args
+    return _decode_args(args) + (_encode_result,)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\urllib\parse.py", line 117, in _decode_args
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\urllib\parse.py", line 117, in <genexpr>
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+                 ^^^^^^^^
+AttributeError: 'WindowsPath' object has no attribute 'decode'
+2026-10-23 16:31:42,460 - Lgbm Mode Api - ERROR - Critical error: Reference data failed to load. C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\Files\reference.csv: [Errno 2] No such file or directory: 'C:\\Users\\ASUS\\PythonProject4\\Jupyter_Notebook\\e-commerce_customer_churn\\Files\\reference.csv'
+2026-10-23 16:31:43,423 - Lgbm Mode Api - ERROR - Model loading failed'WindowsPath' object has no attribute 'decode'
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 38, in <module>
+    lgbm_model = mlflow.pyfunc.load_model(MODEL_PATH)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracing\provider.py", line 891, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\pyfunc\__init__.py", line 1131, in load_model
+    local_path = _download_artifact_from_uri(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracking\artifact_utils.py", line 116, in _download_artifact_from_uri
+    root_uri, artifact_path = _get_root_uri_and_artifact_path(artifact_uri)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracking\artifact_utils.py", line 91, in _get_root_uri_and_artifact_path
+    if ModelsArtifactRepository.is_models_uri(artifact_uri):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\models_artifact_repo.py", line 92, in is_models_uri
+    return urllib.parse.urlparse(uri).scheme == "models"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\urllib\parse.py", line 394, in urlparse
+    url, scheme, _coerce_result = _coerce_args(url, scheme)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\urllib\parse.py", line 133, in _coerce_args
+    return _decode_args(args) + (_encode_result,)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\urllib\parse.py", line 117, in _decode_args
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\urllib\parse.py", line 117, in <genexpr>
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+                 ^^^^^^^^
+AttributeError: 'WindowsPath' object has no attribute 'decode'
+2026-10-23 16:32:10,123 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:32:18,104 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:32:23,743 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:33:01,158 - watchfiles.main - INFO - 3 changes detected
+2026-10-23 16:33:02,541 - watchfiles.main - INFO - 6 changes detected
+2026-10-23 16:33:07,966 - Lgbm Mode Api - ERROR - Critical error: Reference data failed to load. C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\Files\reference.csv: [Errno 2] No such file or directory: 'C:\\Users\\ASUS\\PythonProject4\\Jupyter_Notebook\\e-commerce_customer_churn\\Files\\reference.csv'
+2026-10-23 16:33:08,873 - Lgbm Mode Api - ERROR - Model loading failedCould not find a registered artifact repository for: c:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'b2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts', 'abfss']
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 39, in <module>
+    lgbm_model = mlflow.pyfunc.load_model(model_uri)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracing\provider.py", line 891, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\pyfunc\__init__.py", line 1131, in load_model
+    local_path = _download_artifact_from_uri(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracking\artifact_utils.py", line 117, in _download_artifact_from_uri
+    repo = get_artifact_repository(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 158, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 81, in get_artifact_repository
+    raise MlflowException(
+mlflow.exceptions.MlflowException: Could not find a registered artifact repository for: c:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'b2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts', 'abfss']
+2026-10-23 16:33:44,957 - Lgbm Mode Api - ERROR - Critical error: Reference data failed to load. C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\Files\reference.csv: [Errno 2] No such file or directory: 'C:\\Users\\ASUS\\PythonProject4\\Jupyter_Notebook\\e-commerce_customer_churn\\Files\\reference.csv'
+2026-10-23 16:33:45,883 - Lgbm Mode Api - ERROR - Model loading failedCould not find a registered artifact repository for: c:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'b2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts', 'abfss']
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 39, in <module>
+    lgbm_model = mlflow.pyfunc.load_model(model_uri)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracing\provider.py", line 891, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\pyfunc\__init__.py", line 1131, in load_model
+    local_path = _download_artifact_from_uri(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracking\artifact_utils.py", line 117, in _download_artifact_from_uri
+    repo = get_artifact_repository(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 158, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 81, in get_artifact_repository
+    raise MlflowException(
+mlflow.exceptions.MlflowException: Could not find a registered artifact repository for: c:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'b2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts', 'abfss']
+2026-10-23 16:33:51,393 - Lgbm Mode Api - ERROR - Critical error: Reference data failed to load. C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\Files\reference.csv: [Errno 2] No such file or directory: 'C:\\Users\\ASUS\\PythonProject4\\Jupyter_Notebook\\e-commerce_customer_churn\\Files\\reference.csv'
+2026-10-23 16:33:52,314 - Lgbm Mode Api - ERROR - Model loading failedCould not find a registered artifact repository for: c:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'b2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts', 'abfss']
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 39, in <module>
+    lgbm_model = mlflow.pyfunc.load_model(model_uri)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracing\provider.py", line 891, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\pyfunc\__init__.py", line 1131, in load_model
+    local_path = _download_artifact_from_uri(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracking\artifact_utils.py", line 117, in _download_artifact_from_uri
+    repo = get_artifact_repository(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 158, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 81, in get_artifact_repository
+    raise MlflowException(
+mlflow.exceptions.MlflowException: Could not find a registered artifact repository for: c:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'b2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts', 'abfss']
+2026-10-23 16:34:40,643 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:34:55,349 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:35:10,340 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:35:25,376 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:35:26,295 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:35:28,417 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:35:55,118 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:36:09,981 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:36:10,340 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:36:25,022 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:36:32,230 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:37:23,516 - Lgbm Mode Api - ERROR - Critical error: Reference data failed to load. C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\Files\reference.csv: [Errno 2] No such file or directory: 'C:\\Users\\ASUS\\PythonProject4\\Jupyter_Notebook\\e-commerce_customer_churn\\Files\\reference.csv'
+2026-10-23 16:37:24,467 - Lgbm Mode Api - ERROR - Model loading failedCould not find a registered artifact repository for: c:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'b2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts', 'abfss']
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 39, in <module>
+    lgbm_model = mlflow.pyfunc.load_model(model_uri)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracing\provider.py", line 891, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\pyfunc\__init__.py", line 1131, in load_model
+    local_path = _download_artifact_from_uri(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracking\artifact_utils.py", line 117, in _download_artifact_from_uri
+    repo = get_artifact_repository(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 158, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 81, in get_artifact_repository
+    raise MlflowException(
+mlflow.exceptions.MlflowException: Could not find a registered artifact repository for: c:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'b2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts', 'abfss']
+2026-10-23 16:37:29,933 - Lgbm Mode Api - ERROR - Critical error: Reference data failed to load. C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\Files\reference.csv: [Errno 2] No such file or directory: 'C:\\Users\\ASUS\\PythonProject4\\Jupyter_Notebook\\e-commerce_customer_churn\\Files\\reference.csv'
+2026-10-23 16:37:30,864 - Lgbm Mode Api - ERROR - Model loading failedCould not find a registered artifact repository for: c:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'b2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts', 'abfss']
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 39, in <module>
+    lgbm_model = mlflow.pyfunc.load_model(model_uri)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracing\provider.py", line 891, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\pyfunc\__init__.py", line 1131, in load_model
+    local_path = _download_artifact_from_uri(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\tracking\artifact_utils.py", line 117, in _download_artifact_from_uri
+    repo = get_artifact_repository(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 158, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 81, in get_artifact_repository
+    raise MlflowException(
+mlflow.exceptions.MlflowException: Could not find a registered artifact repository for: c:. Currently registered schemes are: ['', 'file', 's3', 'r2', 'b2', 'gs', 'wasbs', 'ftp', 'sftp', 'dbfs', 'hdfs', 'viewfs', 'runs', 'models', 'http', 'https', 'mlflow-artifacts', 'abfss']
+2026-10-23 16:37:40,632 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:37:55,228 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:37:55,586 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:38:10,253 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:38:25,299 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:38:40,288 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:38:41,603 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:38:42,990 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:38:59,660 - watchfiles.main - INFO - 3 changes detected
+2026-10-23 16:39:01,164 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:39:01,531 - watchfiles.main - INFO - 5 changes detected
+2026-10-23 16:39:07,192 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:39:10,081 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:39:14,223 - watchfiles.main - INFO - 3 changes detected
+2026-10-23 16:39:14,682 - watchfiles.main - INFO - 5 changes detected
+2026-10-23 16:39:20,025 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:39:26,846 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:39:36,655 - watchfiles.main - INFO - 3 changes detected
+2026-10-23 16:39:37,115 - watchfiles.main - INFO - 5 changes detected
+2026-10-23 16:39:42,489 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 16:39:51,963 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:40:02,990 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder
+2026-10-23 16:40:06,969 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:40:22,043 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:40:37,055 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:40:37,410 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:40:52,074 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:40:52,455 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:41:07,120 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:41:07,486 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:41:22,179 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:41:37,170 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:41:37,527 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:41:52,201 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:41:52,556 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:42:07,233 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:42:07,587 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:42:22,213 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:42:22,582 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:42:37,271 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:42:37,628 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:42:52,289 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:42:52,658 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:43:07,343 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:43:07,701 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:43:22,377 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:43:22,734 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:43:37,395 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:43:37,755 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:43:52,451 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:43:52,813 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:44:07,437 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:44:07,807 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:44:22,523 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:44:22,887 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:44:37,482 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:44:37,838 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:44:52,536 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:44:52,923 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:45:07,584 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:45:07,962 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:45:22,606 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:45:22,966 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:45:37,637 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:45:38,017 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:45:52,690 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:45:53,058 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:46:07,708 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:46:08,085 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:46:22,777 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:46:23,142 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:46:37,790 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:46:49,130 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:46:49,482 - watchfiles.main - INFO - 1 change detected
+2026-10-23 16:55:19,325 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 16:55:28,240 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder
+2026-10-23 16:55:41,972 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 16:55:56,930 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder
+2026-10-23 20:42:34,719 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 20:42:34,719 - Lgbm Mode Api - ERROR - Model loading failedload() got an unexpected keyword argument 'extensions'
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 43, in <module>
+    lgbm_model = sio.load(MODEL_PATH, extensions={"sklearn": "sklearn"})
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: load() got an unexpected keyword argument 'extensions'
+2026-10-23 20:43:08,153 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 20:43:08,160 - Lgbm Mode Api - ERROR - Model loading failedUntrusted types found in the file: ['collections.OrderedDict', 'imblearn.over_sampling._smote.base.SMOTE', 'imblearn.pipeline.Pipeline', 'lightgbm.basic.Booster', 'lightgbm.sklearn.LGBMClassifier', 'numpy.dtype', 'sklearn.metrics._dist_metrics.EuclideanDistance64', 'sklearn.neighbors._kd_tree.KDTree'].
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 43, in <module>
+    lgbm_model = sio.load(MODEL_PATH)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\skops\io\_persist.py", line 151, in load
+    audit_tree(tree, trusted=trusted)
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\skops\io\_audit.py", line 60, in audit_tree
+    raise UntrustedTypesFoundException(unsafe)
+skops.io.exceptions.UntrustedTypesFoundException: Untrusted types found in the file: ['collections.OrderedDict', 'imblearn.over_sampling._smote.base.SMOTE', 'imblearn.pipeline.Pipeline', 'lightgbm.basic.Booster', 'lightgbm.sklearn.LGBMClassifier', 'numpy.dtype', 'sklearn.metrics._dist_metrics.EuclideanDistance64', 'sklearn.neighbors._kd_tree.KDTree'].
+2026-10-23 20:45:28,511 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 20:45:28,512 - Lgbm Mode Api - ERROR - Model loading failedtrusted must be a list of strings. Before version 0.10 trusted could be a boolean, but this is no longer supported, due to a reported CVE-2024-37065. You can pass the output of `get_untrusted_types` as trusted to load the data. Be sure to review the output of the function before passing it as trusted.
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 43, in <module>
+    lgbm_model = sio.load(MODEL_PATH, trusted=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\skops\io\_persist.py", line 139, in load
+    raise TypeError(
+TypeError: trusted must be a list of strings. Before version 0.10 trusted could be a boolean, but this is no longer supported, due to a reported CVE-2024-37065. You can pass the output of `get_untrusted_types` as trusted to load the data. Be sure to review the output of the function before passing it as trusted.
+2026-10-23 20:47:46,569 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 20:47:46,574 - Lgbm Mode Api - ERROR - Model loading failedUntrusted types found in the file: ['collections.OrderedDict', 'imblearn.over_sampling._smote.base.SMOTE', 'imblearn.pipeline.Pipeline', 'lightgbm.basic.Booster', 'lightgbm.sklearn.LGBMClassifier', 'numpy.dtype', 'sklearn.metrics._dist_metrics.EuclideanDistance64', 'sklearn.neighbors._kd_tree.KDTree'].
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\api_model.py", line 43, in <module>
+    lgbm_model = sio.load(MODEL_PATH, trusted=[
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\skops\io\_persist.py", line 151, in load
+    audit_tree(tree, trusted=trusted)
+  File "C:\Users\ASUS\PythonProject4\Jupyter_Notebook\.venv\Lib\site-packages\skops\io\_audit.py", line 60, in audit_tree
+    raise UntrustedTypesFoundException(unsafe)
+skops.io.exceptions.UntrustedTypesFoundException: Untrusted types found in the file: ['collections.OrderedDict', 'imblearn.over_sampling._smote.base.SMOTE', 'imblearn.pipeline.Pipeline', 'lightgbm.basic.Booster', 'lightgbm.sklearn.LGBMClassifier', 'numpy.dtype', 'sklearn.metrics._dist_metrics.EuclideanDistance64', 'sklearn.neighbors._kd_tree.KDTree'].
+2026-10-23 20:49:04,986 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 20:49:05,103 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder\model.skops
+2026-10-23 20:49:51,165 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 20:49:51,256 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder\model.skops
+2026-10-23 20:49:58,027 - Lgbm Mode Api - INFO - Reference data loaded successfully
+2026-10-23 20:49:58,103 - Lgbm Mode Api - INFO - Model loaded successfully: C:\Users\ASUS\PythonProject4\Jupyter_Notebook\e-commerce_customer_churn\src\LgbmClassification_folder\model.skops
+2026-10-23 20:50:04,174 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:50:20,429 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:50:35,341 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:50:50,361 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:50:56,117 - Lgbm Mode Api - INFO - The number of samples is lower than the threshold expected for data monitoring .
+2026-10-23 20:51:05,409 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:51:05,778 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:51:06,144 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:51:34,572 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:51:34,934 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:51:49,636 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:52:04,641 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:52:04,997 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:52:19,629 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:52:19,985 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:52:34,668 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:52:35,035 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:52:49,677 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:53:04,710 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:53:05,074 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:53:19,752 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:53:34,717 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:53:35,083 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:53:49,793 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:54:04,785 - watchfiles.main - INFO - 1 change detected
+2026-10-23 20:54:05,152 - watchfiles.main - INFO - 1 change detected
