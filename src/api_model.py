@@ -53,11 +53,10 @@ def health_check():
     if lgbm_model is None:
         model_is_loaded = False
 
-        return {
-            "status_code": 500,
-            "status": "UnHealthy",
-            "model_loaded": model_is_loaded,
-            "message": "The model failed to load!"}
+        raise HTTPException(
+            status_code=500,
+            detail="The model failed to load!"
+        )
 
     else:
         model_is_loaded = True
