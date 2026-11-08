@@ -9,7 +9,6 @@ from data_monitoring import check_data_drift
 
 # تعیین مسیر فایل های مدل و داده های مرجع و نام ستون ها
 BASE_DIR = Path(__file__).resolve().parent
-FEATURE_PATH = BASE_DIR / "features_name.pkl"
 REFERENCE_PATH = BASE_DIR / "Files" / "reference.csv"
 LOG_FILE_PATH = BASE_DIR / "Files" / "app_errors.log"
 MODEL_PATH = BASE_DIR / "LgbmClassification_folder" / "model.skops"
@@ -28,9 +27,6 @@ model_is_loaded = None
 try:
     df_reference = pd.read_csv(REFERENCE_PATH)
     logger.info("Reference data loaded successfully")
-
-    with open(FEATURE_PATH, "rb") as features:
-        features_name = joblib.load(features)
 
 except Exception as e:
         logger.error(f"Critical error: Reference data failed to load. {REFERENCE_PATH}: {str(e)}")
@@ -87,18 +83,16 @@ def predict_lgbm_classification(request: BatchPredictionRequest, background_task
         # داده های دریافتی که توسط pydantic اعتبار سنجی شده به DataFrame تبدیل میشوند
         df_samples = pd.DataFrame([s.model_dump() for s in request.samples])
 
-        # انتخاب ستون های مورد نیاز و مرتب سازی بر اساس ترتیب نام ستون های feature_name
-        df = df_samples[features_name]
         min_sample = 50
 
-        if len(df) > min_sample:
+        if len(df_samples) > min_sample:
             # ثبت وظایف در پس زمینه برای بررسی انحراف و تغییر داده drift
-            background_tasks.add_task(check_data_drift, df_reference, df)
+            background_tasks.add_task(check_data_drift, df_reference, df_samples)
         else:
             logger.info("The number of samples is lower than the threshold expected for data monitoring .")
 
         # انجام فرایند پیش بینی توسط مدل
-        predict_model = lgbm_model.predict(df)
+        predict_model = lgbm_model.predict(df_samples)
         result = predict_model.tolist()
 
         return {"prediction result": result}
