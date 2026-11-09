@@ -33,10 +33,10 @@ jobs:
       - name: Login To Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+          username: ${{secrets.DOCKER_HUB_USERNAME}}
+          password: ${{secrets.DOCKER_HUB_TOKEN}}
           
       - name: Push Ducker Image to Docker Hub
         run: |
-          docker tag ml-classification:latest ${{ secrets.DOCKER_HUB_USERNAME }}/ml-classification:latest
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/ml-classification:latest
+          docker tag ml-classification:latest ${{secrets.DOCKER_HUB_USERNAME}}/ml-classification:latest
+          docker push ${{secrets.DOCKER_HUB_USERNAME}}/ml-classification:latest
