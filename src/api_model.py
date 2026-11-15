@@ -95,7 +95,7 @@ def predict_lgbm_classification(request: BatchPredictionRequest, background_task
         predict_model = lgbm_model.predict(df_samples)
         result = predict_model.tolist()
 
-        return {"prediction result": result}
+        return {"model prediction result": result}
 
     except Exception as E:
         logger.error(f"Error during the prediction process: {str(E)}")
