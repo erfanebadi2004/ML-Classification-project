@@ -1,0 +1,12 @@
+services:
+  ml-classification-container:
+
+    image: bktash2004/ml-classification:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - lightgbmclassifier_folder:/app/LgbmClassification_folder
+      - ./my_reference:/app/Files
+
+volumes:
+  lightgbmclassifier_folder:
