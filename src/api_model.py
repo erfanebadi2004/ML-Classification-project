@@ -1,6 +1,5 @@
 import skops.io as sio
 import logging
-import joblib
 import pandas as pd
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from validation import BatchPredictionRequest
@@ -9,7 +8,7 @@ from data_monitoring import check_data_drift
 
 # تعیین مسیر فایل های مدل و داده های مرجع و نام ستون ها
 BASE_DIR = Path(__file__).resolve().parent
-REFERENCE_PATH = BASE_DIR / "Files" / "reference.csv"
+REFERENCE_PATH = BASE_DIR / "my_reference" / "reference_data.csv"
 LOG_FILE_PATH = BASE_DIR / "Files" / "app_errors.log"
 MODEL_PATH = BASE_DIR / "LgbmClassification_folder" / "model.skops"
 
