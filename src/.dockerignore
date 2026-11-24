@@ -4,3 +4,4 @@ Files/prediction_test.csv.dvc
 mlflow.db
 Readme.md
 test_model.py
+ui_streamlit.py
